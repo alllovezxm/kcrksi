@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编辑学生</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>编辑学生</h1>
+        <form method="POST">
+            <div class="form-group">
+                <label>姓名</label>
+                <input type="text" name="name" value="{{ student.name }}" required>
+            </div>
+            <div class="form-group">
+                <label>学号</label>
+                <input type="text" name="student_id" value="{{ student.student_id }}" required>
+            </div>
+            <div class="form-group">
+                <label>班级</label>
+                <input type="text" name="class_name" value="{{ student.class_name }}">
+            </div>
+            <div class="form-group">
+                <label>电话</label>
+                <input type="text" name="phone" value="{{ student.phone }}">
+            </div>
+            <button type="submit" class="btn btn-primary">更新</button>
+            <a href="{{ url_for('index') }}" class="btn btn-secondary">返回</a>
+        </form>
+    </div>
+</body>
+</html>
+
